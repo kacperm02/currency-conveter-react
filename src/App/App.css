@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+    flex-direction: column;
+    width:50%;
+    max-width: 400px;
+    margin:auto;
+    background-color: #9eacfe;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 1%;
 }
 
 .App-logo {
@@ -12,7 +20,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -34,5 +41,16 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+    background-repeat: no-repeat;
+}
+@media  (max-width: 767px) {
+  .app {
+      width: 100%;
+      height: 100%;
   }
 }
