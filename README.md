@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Visit my Site
+[currency-link]([https://kacperm02.github.io/homepage/](https://kacperm02.github.io/currency-conveter-react/)
+
 ## Available Scripts
 
 In the project directory, you can run:
