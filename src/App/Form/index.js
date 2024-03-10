@@ -46,7 +46,7 @@ const Form = ({calculateResult, result}) => {
                         {currencies.map((currency => (
                             <option
                             key={currency.cut}
-                            value={currency.rate}
+                            value={currency.cut}
                             >
                                 {currency.content}
                             </option>
