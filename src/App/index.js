@@ -3,6 +3,7 @@ import { currencies } from './currencies';
 import Form from './Form';
 import {Clock} from './Clock';
 import './App.css';
+import { StyledApp, StyledBody } from './styled';
 
 function App() {
   const [result,setResult] = useState();
@@ -22,10 +23,12 @@ function App() {
   
 
   return (
-    <div className="app">
+    <StyledBody>
+    <StyledApp>
       <Clock/>
       <Form result={result} calculateResult={calculateResult}/>
-    </div>
+    </StyledApp>
+    </StyledBody>
   );
 }
 

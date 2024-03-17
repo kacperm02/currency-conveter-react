@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import "./style.css"
+import { Header, Span, StyledInput, StyledSelect, StyledButton } from "./styled";
 
 const Form = ({calculateResult, result}) => {
     const [currency, setCurrency] = useState(currencies[0].cut);
@@ -14,32 +14,30 @@ const Form = ({calculateResult, result}) => {
 
     return (
         <form onSubmit={onSubmit}>
-            <h1 className="header__content">
+            <Header>
                 Przelicznik walut
-            </h1>
+            </Header>
             <p>
                 <label>
-                    <span className="form__text">
+                    <Span>
                         Kwota w PLN:
-                    </span>
-                    <input
+                    </Span>
+                    <StyledInput
                         value={amount}
                         onChange={({target}) => setAmount(target.value)}
                         placeholder="Kwota w PLN"
                         type="number"
                         required
                         step="0.01"
-                        className="form__field"
                     />
                 </label>
             </p>
             <p>
                 <label>
-                    <span className="form__text">
+                    <Span>
                         Wybierz walute
-                    </span>
-                    <select
-                    className="form__field"
+                    </Span>
+                    <StyledSelect
                     value={currency}
                     onChange={({target}) => setCurrency(target.value)}
                     >
@@ -51,11 +49,11 @@ const Form = ({calculateResult, result}) => {
                                 {currency.content}
                             </option>
                         )))}
-                    </select>
+                    </StyledSelect>
                 </label>
             </p>
             <p>
-                <button className="form__button">Przelicz!</button>
+                <StyledButton>Przelicz!</StyledButton>
             </p>
             
             <Result result={result}/>
